@@ -1,6 +1,6 @@
-import Layout from "./components/layout/layout";
-import Profile from "./components/profile/profile";
-import Repositories from "./repositories/repositories";
+import Layout from "./components/layout/Layout";
+import Profile from "./components/profile/Profile";
+import Repositories from "./components/repositories/Repositories";
 
 function App() {
   return (

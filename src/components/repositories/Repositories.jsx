@@ -1,5 +1,5 @@
 import React from "react";
-import RepositorieItems from "./repositoryItems";
+import RepositorieItems from "./RepositoryItems";
 
 function Repositories() {
     return(
