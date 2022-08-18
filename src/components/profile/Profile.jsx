@@ -1,27 +1,33 @@
 import React from "react";
+import useGithub from "../../hooks/githubHooks";
 
 function Profile() {
+
+    const { githubInfo } = useGithub();
+
     return(
         <div>
             <img
-                src="https://avatars.githubusercontent.com/u/85793463?v=4"
+                src={githubInfo.user.avatar_url}
                 alt="user"
             />
-            <h1>Eliana Nunes</h1>
-            <h3>Username:</h3>
+            <h1>{githubInfo.user.name}</h1>
+            <h3>Username</h3>
             <a
-                href="https://github.com/eliananunes"
+                href={githubInfo.user.html_url}
 
             >
-                eliananunes
+                {githubInfo.user.login}
             </a>
-            <h3>Redes:</h3>
+            <h3>Redes</h3>
             <a
-                href="https://www.linkedin.com/in/elianadn/"
+                href={githubInfo.user.blog}
 
             >
                 Contato
             </a>
+            <h3>Repositórios</h3>
+            <span> {githubInfo.user.public_repos}</span>
         </div>
     );
 }
