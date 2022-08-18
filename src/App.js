@@ -1,15 +1,16 @@
 import Layout from "./components/layout/Layout";
 import Profile from "./components/profile/Profile";
 import Repositories from "./components/repositories/Repositories";
+import GitHubProvider from "./hooks/githubProvider";
 
 function App() {
   return (
-    <div>
-      <Layout>
-        <Profile />
-        <Repositories />
-      </Layout>
-    </div>
+      <GitHubProvider>
+        <Layout>
+          <Profile />
+          <Repositories />
+        </Layout>
+      </GitHubProvider>
   );
 }
 
